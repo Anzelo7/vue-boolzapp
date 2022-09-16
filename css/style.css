@@ -1,0 +1,144 @@
+/* generics */
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+
+
+/* utilities */
+
+/* content */
+
+.container{
+  margin-top: 50px;
+  height: calc(100vh - 100px);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  overflow: hidden;
+}
+
+.left-panel{
+  width: 35%;;
+  min-width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.contact-user,
+.logged-user{
+  background-color: #eaeaea;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar-icon{
+  width: 50px;
+  height:50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.avatar-info-container,
+.user-info-container{
+  display: flex;
+  align-items: center;
+}
+
+
+
+.icon-container{
+  color: #b1b1b1;
+  font-size: 1.2rem;
+}
+
+.icon-container > * {
+  margin-right: 20px;
+}
+
+
+.notification-area{
+  display: flex;
+  background-color: #8edafc;
+  align-items: center;
+}
+
+.notification-icon{
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 5px 25px 5px 25px;
+    background-color: #fff;
+    color: #8edafc;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 2rem;
+}
+
+.search-contacts{
+  padding: 5px 20px; 
+  background-color: #fafafa;
+}
+
+.contact.active{
+  background-color: #e9ebeb;
+}
+
+.avatar-info-container {
+  border-bottom: 1px solid #eaeaea;
+  padding: 5px;
+}
+
+.avatar-info{
+  margin-left: 20px;
+}
+
+.avatar-info h2 {
+  font-size: 1rem;
+}
+
+.avatar-info p {
+  font-size: 0.8rem;
+  color: #b1b1b1
+}
+
+.contacts-container{
+  overflow-y: scroll;
+  flex-grow: 1;
+}
+
+
+.right-panel{
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-user{
+  border-left: 1px solid #b1b1b1;
+}
+
+.chat-container{
+  flex-grow: 1;
+  background-image: url('../img/mine.jpg');
+}
+
+
+.new-message-container{
+  height: 70px;
+  background-color: #f3eeea;
+}
