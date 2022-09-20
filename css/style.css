@@ -135,10 +135,76 @@ body {
 .chat-container{
   flex-grow: 1;
   background-image: url('../img/mine.jpg');
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 
 .new-message-container{
   height: 70px;
   background-color: #f3eeea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+/* message could be sent or received */
+.message{
+  margin: 30px;
+  padding: 15px;
+  width: 40%;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+/* message status */
+.sent{
+  background-color: #d5f9ba;
+  align-self: flex-end;
+}
+
+.received{
+  background-color: white;
+  align-self: flex-start;
+}
+/* /message status */
+
+.message-time{
+  text-align: right;
+  font-size: 0.7rem;
+  color: #b1b1b1;
+}
+
+.new-message{
+  flex-grow: 1;
+  text-align: center
+}
+.hidden-anchor{
+  display: none;
+  height: 0px;
+}
+
+/* pannello per cancellazione messaggi */
+.message-delete-panel{
+  position: absolute;
+  display: none; 
+  box-shadow: 5px 7px 2px 2px rgba(0, 0, 0, 0.17);
+  background-color: #eaeaea;
+  padding: 15px;
+  border-radius: 3px;
+}
+
+.message-delete-panel.show-panel{
+  display: block;
+}
+
+.message i {
+  position: absolute;
+  right: 7px;
+  font-size: 0.8rem;
+  top: 7px;   
 }
